@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=192G
-#SBATCH --time=6:00:00
+#SBATCH --time=9:00:00
 #SBATCH --partition=cpu-large
 #SBATCH --output=Preprocess_%A.out
 #SBATCH --error=Preprocess_%A.err
@@ -68,10 +68,12 @@ echo "===== Running Suite2p pipeline ====="
 python run_suite2p_pipeline.py \
   --denoise 1 \
   --spatial_scale 1 \
-  --data_path '/storage/coda1/p-fnajafi3/0/shared/2P_Imaging/E5LG/E5LG_CRBL_crux1_20250516_EBC-325/' \
-  --save_path '/storage/coda1/p-fnajafi3/0/oamiratashani6/results/E5LG/E5LG_CRBL_crux1_20250516_EBC-325' \
+  --data_path '/storage/coda1/p-fnajafi3/0/shared/2P_Imaging/E5LG/E5LG_CRBL_crux2_20250506_EBC-259/' \
+  --save_path '/storage/cedar/cedar0/
+cedarp-fnajafi3-0 /
+2p_imaging /' \
   --nchannels 1 \
   --functional_chan 2 \
   --target_structure 'dendrite'
 
-echo "===== Preprocessing job finished at $(date) ====="
+echo "===== Preprocessing job 1 finished at $(date) ====="
